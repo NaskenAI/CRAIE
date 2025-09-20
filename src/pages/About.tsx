@@ -36,7 +36,7 @@ const About = () => {
     },
     {
       name: "Patrick Walsh",
-      role: "Clerk",
+      role: "Secretary",
       initials: "PW",
     },
   ];
