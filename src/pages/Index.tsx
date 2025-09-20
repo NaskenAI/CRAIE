@@ -177,7 +177,7 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-primary"
+              className="bg-white text-primary hover:bg-white/90"
               asChild
             >
               <Link to="/contact">Become a Partner</Link>
