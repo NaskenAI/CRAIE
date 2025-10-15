@@ -22,7 +22,7 @@ const Index = () => {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 mb-4 rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-primary shadow">
               <span className="inline-block h-2 w-2 rounded-full bg-emerald-600" />
-              IRS 501(c)(3) approved
+              A 501(c)(3) nonprofit organization
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               Center for Responsible AI in Education
