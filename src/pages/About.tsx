@@ -26,7 +26,7 @@ const About = () => {
   const boardMembers = [
     {
       name: "Sandesh Gubbi Virupaksha",
-      role: "President/Executive Director",
+      role: "President / Executive Director",
       initials: "SG",
     },
     {
