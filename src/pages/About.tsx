@@ -23,23 +23,20 @@ const About = () => {
     },
   ];
 
+  // Officers first, then directors sorted by surname.
   const boardMembers = [
-    {
-      name: "Sandesh GV",
-      role: "President",
-      initials: "SG",
-    },
-    {
-      name: "Sameer Naik",
-      role: "Treasurer",
-      initials: "SN",
-    },
-    {
-      name: "Patrick Walsh",
-      role: "Secretary",
-      initials: "PW",
-    },
-  ];
+    { name: "Sandesh GV", role: "President / Executive Director" },
+    { name: "Sameer Naik", role: "Treasurer" },
+    { name: "Patrick Walsh", role: "Clerk / Secretary" },
+    { name: "Amanda Campos", role: "Director" },
+    { name: "Veronique Dozier", role: "Director" },
+  ].map((member) => {
+    const parts = member.name.split(" ");
+    return {
+      ...member,
+      initials: `${parts[0][0]}${parts[parts.length - 1][0]}`.toUpperCase(),
+    };
+  });
 
   return (
     <Layout>
@@ -61,9 +58,9 @@ const About = () => {
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">Our Mission</h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                To advance responsible and equitable adoption of artificial intelligence in education by 
-                providing training, resources, and volunteer support to schools and nonprofits, especially 
-                in underserved communities.
+                To advance responsible and equitable adoption of artificial intelligence in education by
+                providing training, resources, research, and volunteer support to schools and nonprofits, with
+                a focus on underserved communities.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 We believe that artificial intelligence has the power to transform education for the better, but only 
@@ -135,9 +132,12 @@ const About = () => {
               Meet the dedicated leaders guiding CRAIE's mission and strategic direction.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {boardMembers.map((member, index) => (
-              <Card key={index} className="text-center shadow-card hover:shadow-elegant transition-all duration-300">
+          <div className="flex flex-wrap justify-center gap-8">
+            {boardMembers.map((member) => (
+              <Card
+                key={member.name}
+                className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)] text-center shadow-card hover:shadow-elegant transition-all duration-300"
+              >
                 <CardContent className="pt-8 pb-6">
                   <Avatar className="w-20 h-20 mx-auto mb-4">
                     <AvatarFallback className="bg-gradient-primary text-white text-xl font-semibold">
@@ -151,6 +151,8 @@ const About = () => {
               </Card>
             ))}
           </div>
+          {/* TODO: add the board's voluntary/unpaid service statement here. No such statement
+              currently exists in the site or its history, so the wording needs to be supplied. */}
         </div>
       </section>
 
@@ -185,7 +187,7 @@ const About = () => {
               </div>
               <h3 className="text-lg font-semibold mb-2">EIN</h3>
               <p className="text-primary-foreground/80">
-                99-4455282
+                39-4455282
               </p>
             </div>
           </div>
