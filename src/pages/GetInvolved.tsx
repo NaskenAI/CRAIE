@@ -5,7 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Users, Building, DollarSign } from "lucide-react";
 import Layout from "@/components/Layout";
 
@@ -81,10 +81,15 @@ const GetInvolved = () => {
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   Financial support helps us develop programs, provide resources, and reach more schools and communities.
                 </p>
-                {/* TODO: replace with donation processor link */}
                 <Button className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
-                  <Link to="/contact">Donate Now</Link>
+                  <a href="mailto:info@craie.org?subject=Donation%20enquiry">Donate Now</a>
                 </Button>
+                <p className="text-sm text-muted-foreground mt-4">
+                  To make a donation, email us at{" "}
+                  <a href="mailto:info@craie.org" className="text-primary font-medium hover:underline">
+                    info@craie.org
+                  </a>
+                </p>
               </CardContent>
             </Card>
           </div>
