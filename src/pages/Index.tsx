@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { GraduationCap, Users, Lightbulb, ArrowRight } from "lucide-react";
+import { GraduationCap, Users, Lightbulb, ArrowRight, Briefcase } from "lucide-react";
 import Layout from "@/components/Layout";
 import heroImage from "@/assets/hero-classroom.jpg";
 import teamImage from "@/assets/team-collaboration.jpg";
@@ -59,8 +59,9 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">Our mission</h2>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Advance responsible and equitable AI in education by equipping educators, sharing
-            evidence-based resources, and mobilizing volunteers to support schools and nonprofits.
+            To advance responsible and equitable adoption of artificial intelligence in education by
+            providing training, resources, research, and volunteer support to schools and nonprofits,
+            with a focus on underserved communities.
           </p>
         </div>
       </section>
@@ -108,8 +109,41 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Making AI Education Accessible */}
+      {/* Current Work */}
       <section className="py-16 lg:py-24">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Card className="shadow-card hover:shadow-elegant transition-all duration-300 border-l-4 border-l-accent">
+            <CardContent className="p-8 lg:p-10">
+              <div className="flex flex-col sm:flex-row sm:items-start gap-6">
+                <div className="w-14 h-14 bg-gradient-primary rounded-full flex items-center justify-center flex-shrink-0">
+                  <Briefcase className="h-7 w-7 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium uppercase tracking-wide text-accent mb-2">Current work</p>
+                  <h2 className="text-2xl lg:text-3xl font-bold text-primary mb-4">
+                    Advising a New York City–based education nonprofit
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed mb-6">
+                    CRAIE is advising a New York City–based education nonprofit on responsible AI adoption
+                    across operations, grant writing and funding, and a planned AI-driven learning and
+                    resource center.
+                  </p>
+                  <Link
+                    to="/programs"
+                    className="inline-flex items-center font-medium text-primary hover:text-accent transition-colors"
+                  >
+                    Learn more about our programs
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Making AI Education Accessible */}
+      <section className="py-16 lg:py-24 bg-gradient-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>

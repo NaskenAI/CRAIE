@@ -43,6 +43,14 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  to="/programs"
+                  className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                >
+                  Programs
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/get-involved"
                   className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
@@ -66,23 +74,7 @@ const Footer = () => {
             <div className="space-y-2 text-sm text-primary-foreground/80">
               <p>867 Boylston St, 5th Floor</p>
               <p>Boston, MA 02116</p>
-              <div className="pt-4">
-                <p className="text-xs text-primary-foreground/60">
-                  <Link
-                    to="/privacy"
-                    className="hover:text-primary-foreground transition-colors"
-                  >
-                    Privacy Policy
-                  </Link>
-                  {" | "}
-                  <Link
-                    to="/terms"
-                    className="hover:text-primary-foreground transition-colors"
-                  >
-                    Terms of Use
-                  </Link>
-                </p>
-              </div>
+              {/* TODO: add Privacy Policy (/privacy) and Terms of Use (/terms) links once those pages exist. */}
             </div>
           </div>
         </div>

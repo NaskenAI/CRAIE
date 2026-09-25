@@ -10,6 +10,7 @@ const Navigation = () => {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
+    { name: "Programs", path: "/programs" },
     { name: "Get Involved", path: "/get-involved" },
     { name: "Contact", path: "/contact" },
   ];
@@ -48,7 +49,7 @@ const Navigation = () => {
               className="bg-accent hover:bg-accent/90 text-accent-foreground"
               asChild
             >
-              <Link to="/donate">Donate</Link>
+              <Link to="/get-involved#donate">Donate</Link>
             </Button>
           </div>
 
@@ -87,7 +88,7 @@ const Navigation = () => {
                   className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
                   asChild
                 >
-                  <Link to="/donate" onClick={() => setIsOpen(false)}>
+                  <Link to="/get-involved#donate" onClick={() => setIsOpen(false)}>
                     Donate
                   </Link>
                 </Button>

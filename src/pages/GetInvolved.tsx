@@ -4,10 +4,21 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Users, Building, DollarSign } from "lucide-react";
 import Layout from "@/components/Layout";
 
 const GetInvolved = () => {
+  const { hash } = useLocation();
+
+  // Client-side navigation to /get-involved#donate does not scroll on its own.
+  useEffect(() => {
+    if (hash) {
+      document.getElementById(hash.slice(1))?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [hash]);
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -61,7 +72,7 @@ const GetInvolved = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center shadow-card hover:shadow-elegant transition-all duration-300">
+            <Card id="donate" className="scroll-mt-24 text-center shadow-card hover:shadow-elegant transition-all duration-300">
               <CardContent className="pt-8 pb-6">
                 <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
                   <DollarSign className="h-8 w-8 text-white" />
@@ -70,8 +81,9 @@ const GetInvolved = () => {
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   Financial support helps us develop programs, provide resources, and reach more schools and communities.
                 </p>
-                <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                  Donate Now
+                {/* TODO: replace with donation processor link */}
+                <Button className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
+                  <Link to="/contact">Donate Now</Link>
                 </Button>
               </CardContent>
             </Card>
