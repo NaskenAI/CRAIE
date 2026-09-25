@@ -45,7 +45,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold mb-6">About Us</h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            Learn more about CRAIE's mission, vision, and the dedicated team working to advance 
+            Learn more about CRAIE&apos;s mission, vision, and the dedicated team working to advance 
             responsible AI in education.
           </p>
         </div>
@@ -129,7 +129,14 @@ const About = () => {
               Board of Directors & Officers
             </h2>
             <p className="text-lg text-muted-foreground">
-              Meet the dedicated leaders guiding CRAIE's mission and strategic direction.
+              Meet the dedicated leaders guiding CRAIE&apos;s mission and strategic direction.
+            </p>
+
+            {/* USCIS clarification */}
+            <p className="text-sm text-muted-foreground mt-4 max-w-3xl mx-auto">
+              All Board of Directors and Officer roles at CRAIE are voluntary and
+              unpaid. No salaries, wages, stipends, honoraria, equity, or other
+              compensation of any kind are paid or accrued for these positions.
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-8">
@@ -151,8 +158,6 @@ const About = () => {
               </Card>
             ))}
           </div>
-          {/* TODO: add the board's voluntary/unpaid service statement here. No such statement
-              currently exists in the site or its history, so the wording needs to be supplied. */}
         </div>
       </section>
 
